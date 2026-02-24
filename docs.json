@@ -7,80 +7,175 @@
   },
   "navigation": {
     "pages": [
-      "introduction"
+      "introduction",
+      "guides/getting-started"
     ],
     "groups": [
       {
-        "group": "Guides",
+        "group": "Basics",
         "pages": [
-          "guides/getting-started",
-          "guides/api-reference",
-          "guides/configuration",
-          "guides/tutorials"
+          "docs/basics/uris",
+          "docs/postman",
+          "docs/sdks"
         ]
       },
       {
-        "group": "docs",
+        "group": "Authentication",
         "pages": [
-          "docs/template",
-          "docs/analytics/audit-logs",
-          "docs/authentication/auth-engage",
-          "docs/authentication/auth-legacy",
-          "docs/authentication/auth-ringcentral",
           "docs/authentication/index",
-          "docs/analytics/reports/agent-segment-metadata-report",
-          "docs/analytics/reports/agent-session-report",
-          "docs/analytics/reports/call-detail-report",
-          "docs/analytics/reports/dialer-result-download-report",
-          "docs/analytics/reports/global-call-type-detail-report",
-          "docs/analytics/index",
-          "docs/basics/uris",
-          "docs/bots/index",
-          "docs/dialing/active-calls/index",
-          "docs/dialing/active-calls/quick-start",
-          "docs/dialing/campaigns/campaigns",
-          "docs/dialing/campaigns/dial-groups",
-          "docs/dialing/dnc/dnc-list",
-          "docs/dialing/leads/actions",
-          "docs/dialing/leads/bulk-import",
-          "docs/dialing/leads/search",
-          "docs/dialing/leads/web2campaign",
+          "docs/authentication/auth-ringcentral",
+          "docs/authentication/auth-engage",
+          "docs/authentication/auth-legacy"
+        ]
+      },
+      {
+        "group": "Dialing",
+        "pages": [
           "docs/dialing/index",
           "docs/dialing/quick-start",
-          "docs/integration/admin",
-          "docs/integration/agent-avail",
-          "docs/integration/index",
-          "docs/integration/reports-orig",
-          "docs/integration/reports",
-          "docs/notifications/web-service/index",
-          "docs/notifications/wfm/configure-wfm",
-          "docs/notifications/wfm/payload-wfm",
-          "docs/notifications/index",
-          "docs/routing/ivr/index",
-          "docs/routing/ivr/scripting-node",
-          "docs/routing/ivr/www-node",
-          "docs/routing/queues/group-skills",
-          "docs/routing/queues/queue-events",
-          "docs/routing/queues/queue-groups",
-          "docs/routing/queues/queues",
+          {
+            "group": "Campaigns",
+            "pages": [
+              "docs/dialing/campaigns/campaigns",
+              "docs/dialing/campaigns/dial-groups"
+            ]
+          },
+          {
+            "group": "Leads",
+            "pages": [
+              "docs/dialing/leads/bulk-import",
+              "docs/dialing/leads/search",
+              "docs/dialing/leads/actions",
+              "docs/dialing/leads/web2campaign"
+            ]
+          },
+          {
+            "group": "Active calls",
+            "pages": [
+              "docs/dialing/active-calls/index",
+              "docs/dialing/active-calls/quick-start"
+            ]
+          },
+          {
+            "group": "Do not call lists",
+            "pages": [
+              "docs/dialing/dnc/dnc-list"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Routing",
+        "pages": [
           "docs/routing/index",
           "docs/routing/quick-start",
-          "docs/users/agents/agent-groups",
-          "docs/users/agents/agent-script",
-          "docs/users/agents/agents",
+          {
+            "group": "Queues",
+            "pages": [
+              "docs/routing/queues/queues",
+              "docs/routing/queues/queue-groups",
+              "docs/routing/queues/queue-events",
+              "docs/routing/queues/group-skills"
+            ]
+          },
+          {
+            "group": "IVR",
+            "pages": [
+              "docs/routing/ivr/index",
+              "docs/routing/ivr/scripting-node",
+              "docs/routing/ivr/www-node"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Users",
+        "pages": [
           "docs/users/agents/index",
+          "docs/users/agents/agents",
+          "docs/users/agents/agent-groups",
           "docs/users/agents/skill-profile",
-          "docs/workforce/call-recording/index",
-          "docs/workforce/call-streaming/getting-started",
-          "docs/workforce/call-streaming/live-transcribe",
-          "docs/workforce/call-streaming/save-to-files",
-          "docs/workforce/qm/index",
+          "docs/users/agents/agent-script"
+        ]
+      },
+      {
+        "group": "Analytics",
+        "pages": [
+          "docs/analytics/index",
+          "docs/analytics/audit-logs",
+          {
+            "group": "Reports",
+            "pages": [
+              "docs/analytics/reports/agent-session-report",
+              "docs/analytics/reports/agent-segment-metadata-report",
+              "docs/analytics/reports/call-detail-report",
+              "docs/analytics/reports/dialer-result-download-report",
+              "docs/analytics/reports/global-call-type-detail-report"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Workforce management",
+        "pages": [
           "docs/workforce/index",
+          {
+            "group": "Call recording",
+            "pages": [
+              "docs/workforce/call-recording/index"
+            ]
+          },
+          {
+            "group": "Call streaming",
+            "pages": [
+              "docs/workforce/call-streaming/getting-started",
+              "docs/workforce/call-streaming/live-transcribe",
+              "docs/workforce/call-streaming/save-to-files"
+            ]
+          },
+          {
+            "group": "Quality management",
+            "pages": [
+              "docs/workforce/qm/index"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Integration",
+        "pages": [
+          "docs/integration/index",
+          "docs/integration/admin",
+          "docs/integration/agent-avail",
+          "docs/integration/reports",
+          "docs/integration/reports-orig"
+        ]
+      },
+      {
+        "group": "Notifications",
+        "pages": [
+          "docs/notifications/index",
+          {
+            "group": "Web service",
+            "pages": [
+              "docs/notifications/web-service/index"
+            ]
+          },
+          {
+            "group": "Workforce management",
+            "pages": [
+              "docs/notifications/wfm/configure-wfm",
+              "docs/notifications/wfm/payload-wfm"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Additional resources",
+        "pages": [
           "docs/embeddable",
-          "docs/index",
-          "docs/postman",
-          "docs/redshift-db",
-          "docs/sdks"
+          "docs/bots/index",
+          "docs/redshift-db"
         ]
       }
     ]
