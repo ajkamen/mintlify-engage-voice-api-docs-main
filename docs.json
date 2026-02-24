@@ -91,11 +91,16 @@
       {
         "group": "Users",
         "pages": [
-          "docs/users/agents/index",
-          "docs/users/agents/agents",
-          "docs/users/agents/agent-groups",
-          "docs/users/agents/skill-profile",
-          "docs/users/agents/agent-script"
+          {
+            "group": "Agents",
+            "pages": [
+              "docs/users/agents/index",
+              "docs/users/agents/agents",
+              "docs/users/agents/agent-groups",
+              "docs/users/agents/skill-profile",
+              "docs/users/agents/agent-script"
+            ]
+          }
         ]
       },
       {
