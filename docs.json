@@ -91,11 +91,16 @@
       {
         "group": "Users",
         "pages": [
-          "docs/users/agents/index",
-          "docs/users/agents/agents",
-          "docs/users/agents/agent-groups",
-          "docs/users/agents/skill-profile",
-          "docs/users/agents/agent-script"
+          {
+            "group": "Agents",
+            "pages": [
+              "docs/users/agents/index",
+              "docs/users/agents/agents",
+              "docs/users/agents/agent-groups",
+              "docs/users/agents/skill-profile",
+              "docs/users/agents/agent-script"
+            ]
+          }
         ]
       },
       {
@@ -131,6 +136,12 @@
               "docs/workforce/call-streaming/getting-started",
               "docs/workforce/call-streaming/live-transcribe",
               "docs/workforce/call-streaming/save-to-files"
+            ]
+          },
+          {
+            "group": "Call transcripts",
+            "pages": [
+              "docs/workforce/call-transcripts"
             ]
           },
           {
