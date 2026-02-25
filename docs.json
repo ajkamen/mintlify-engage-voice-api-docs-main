@@ -139,6 +139,12 @@
             ]
           },
           {
+            "group": "Call transcripts",
+            "pages": [
+              "docs/workforce/call-transcripts"
+            ]
+          },
+          {
             "group": "Quality management",
             "pages": [
               "docs/workforce/qm/index"
