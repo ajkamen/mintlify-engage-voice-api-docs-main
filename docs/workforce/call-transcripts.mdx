@@ -1,0 +1,134 @@
+---
+title: Extract call transcripts
+description: Retrieve call transcripts using the transcripts API endpoint
+---
+
+# Extract call transcripts
+
+Use the transcripts API endpoint to extract call transcripts for specific dialog segments. This endpoint allows you to retrieve the full transcript text for a given call segment.
+
+## Endpoint
+
+```
+GET /cx/integration/v1/accounts/{rcAccountId}/sub-accounts/{subAccountId}/transcripts/dialogs/{dialogId}/segments/{segmentId}
+```
+
+## Path parameters
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `rcAccountId` | string | Yes | The RingCentral account ID |
+| `subAccountId` | string | Yes | The sub-account ID within the RingCentral account |
+| `dialogId` | string | Yes | The unique identifier for the dialog (call conversation) |
+| `segmentId` | string | Yes | The unique identifier for the specific segment within the dialog |
+
+## Prerequisites
+
+Before making this API call, you need to:
+
+1. Authenticate using one of the supported authentication methods
+2. Have the appropriate permissions to access call transcripts
+3. Obtain the required IDs (`rcAccountId`, `subAccountId`, `dialogId`, and `segmentId`)
+
+## Request
+
+### Headers
+
+```
+Authorization: Bearer {accessToken}
+Content-Type: application/json
+```
+
+### Sample request
+
+```bash
+curl -X GET \
+  'https://engage.ringcentral.com/cx/integration/v1/accounts/{rcAccountId}/sub-accounts/{subAccountId}/transcripts/dialogs/{dialogId}/segments/{segmentId}' \
+  -H 'Authorization: Bearer {accessToken}' \
+  -H 'Content-Type: application/json'
+```
+
+### Example with actual values
+
+```bash
+curl -X GET \
+  'https://engage.ringcentral.com/cx/integration/v1/accounts/123456/sub-accounts/789012/transcripts/dialogs/abc-123-def/segments/seg-456-xyz' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...' \
+  -H 'Content-Type: application/json'
+```
+
+## Response
+
+### Success response
+
+A successful request returns a `200 OK` status code with the transcript data.
+
+```json
+{
+  "dialogId": "abc-123-def",
+  "segmentId": "seg-456-xyz",
+  "transcript": "Hello, thank you for calling. How may I assist you today?",
+  "startTime": "2024-01-15T10:30:00Z",
+  "endTime": "2024-01-15T10:30:05Z",
+  "speaker": "agent",
+  "confidence": 0.95
+}
+```
+
+### Response fields
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `dialogId` | string | The dialog ID for the call |
+| `segmentId` | string | The segment ID within the dialog |
+| `transcript` | string | The transcribed text for this segment |
+| `startTime` | string | ISO 8601 timestamp when the segment started |
+| `endTime` | string | ISO 8601 timestamp when the segment ended |
+| `speaker` | string | Identifier for the speaker (e.g., "agent", "customer") |
+| `confidence` | number | Confidence score for the transcription (0-1) |
+
+### Error responses
+
+| Status code | Description |
+|-------------|-------------|
+| `400 Bad Request` | Invalid request parameters |
+| `401 Unauthorized` | Missing or invalid authentication token |
+| `403 Forbidden` | Insufficient permissions to access transcripts |
+| `404 Not Found` | Dialog or segment not found |
+| `500 Internal Server Error` | Server error occurred |
+
+## Use cases
+
+### Retrieving full call transcripts
+
+To retrieve a complete call transcript, you'll need to:
+
+1. Get the `dialogId` for the call
+2. Retrieve all `segmentId` values for that dialog
+3. Call this endpoint for each segment
+4. Combine the segments in chronological order
+
+### Quality assurance and compliance
+
+Use this endpoint to:
+
+- Review agent-customer interactions
+- Ensure compliance with scripts and regulations
+- Identify training opportunities
+- Monitor call quality
+
+### Analytics and insights
+
+Extract transcripts to:
+
+- Analyze customer sentiment
+- Identify common issues or questions
+- Track keyword mentions
+- Generate call summaries
+
+## Related resources
+
+- [Call streaming](/docs/workforce/call-streaming/getting-started) - Stream call audio in real-time
+- [Live transcription](/docs/workforce/call-streaming/live-transcribe) - Get real-time call transcripts
+- [Call recording](/docs/workforce/call-recording/index) - Record and store calls
+- [Quality management](/docs/workforce/qm/index) - Review and score agent performance
