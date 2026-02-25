@@ -1,23 +1,23 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "RingCentral Documentation",
+  "name": "RingCentral Engage Voice API",
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#FF6600",
-    "light": "#FF8533",
-    "dark": "#CC5200",
+    "primary": "#0073ae",
+    "light": "#0099e6",
+    "dark": "#005580",
     "background": {
       "light": "#FFFFFF",
-      "dark": "#0A0A0A"
+      "dark": "#1a1a1a"
     },
     "anchors": {
-      "from": "#FF6600",
-      "to": "#0066CC"
+      "from": "#0073ae",
+      "to": "#ff6600"
     }
   },
   "navigation": {
