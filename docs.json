@@ -1,9 +1,24 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Documentation",
+  "name": "RingCentral Documentation",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/favicon.png",
   "colors": {
-    "primary": "#0D9373"
+    "primary": "#FF6600",
+    "light": "#FF8533",
+    "dark": "#CC5200",
+    "background": {
+      "light": "#FFFFFF",
+      "dark": "#0A0A0A"
+    },
+    "anchors": {
+      "from": "#FF6600",
+      "to": "#0066CC"
+    }
   },
   "navigation": {
     "pages": [
